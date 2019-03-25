@@ -35,16 +35,4 @@ public class Card {
 		}
 		return cardList;
 	}
-	
-	public static void main(String[] args ) {
-		
-////		Card card = new Card("1", 1);
-//		ArrayList<Card> card = Card.setCardList();
-////		System.out.println(card);
-//		for(Card c: card) {
-//			System.out.println(c);
-//		}
-		
-		
-	}
 }
