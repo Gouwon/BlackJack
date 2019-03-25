@@ -1,18 +1,15 @@
 package blackjack;
 
 public class Gamer extends Player {
-
+	
+	public Gamer(String name) {
+		this.name = name;
+	}
+	
 	@Override
 	public void showHand() {
 		
 	}
-
-	public Gamer(String name) {
-		this.name = name;
-		
-	}
-
-	
 	
 	@Override
 	protected void check() {
