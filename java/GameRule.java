@@ -7,8 +7,7 @@ import java.util.Scanner;
 public class GameRule implements Deck {
 	
 	public static ArrayList<Card> deck = Card.setCardList(); 
-	
-	// 점수를 확인하고 평가하는 함수 
+	 
 	public static void compare(Player player1, Player player2) {
 		boolean _isBusted = (player1.point > 21 || player2.point > 21) ? true : false;
 		boolean _isBlackJack = (player1.point == 21 || player2.point == 21) ? true : false;
@@ -51,8 +50,6 @@ public class GameRule implements Deck {
 	
 	public static void game(String gamerName) {
 		
-//		GameRule.getDeck();
-//		GameRule.deck;
 		getDeck();
 		Player gamer = new Gamer(gamerName);
 		Player dealer = new Dealer("Dealer");
