@@ -5,11 +5,31 @@ import java.util.ArrayList;
 public class Dealer extends Player {
 	ArrayList<Card> bluff = new ArrayList<Card>();
 	Boolean _doShow = false;
+	
 	public Dealer(String name) {
 		this.name = name;
-
 	}
 	
+	@Override
+	public void hasAce() {
+		boolean _hasAce = false;
+		if(!_hasAce) {
+			for(Card card : this.hand) {
+				for(String ace : aces) {
+					_hasAce = (card.name == ace) ? true : false;
+				}
+			}
+		}
+		
+		sum();
+		int _howAces = howAces();
+		int _tPoint = this.point - _howAces;
+		
+		if(_hasAce && _tPoint <= 10) {
+			this.point += 10;
+		}
+	}
+
 	@Override
 	public void showHand() {
 		
@@ -40,7 +60,6 @@ public class Dealer extends Player {
 
 	@Override
 	public void isStay() {
-//		System.out.println(this + "의 패 : " + this.hand);
 		check();
 		hasAce();
 		
