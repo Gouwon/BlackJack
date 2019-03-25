@@ -19,26 +19,7 @@ public abstract class Player {
 		this.name = name;
 	}
 	
-	
-	// 초기 패가 A, A이면 _tPoint가 0이 되고, 카드의 합은 22 / 2가 아닌 12가 되어야 한다. 3장은 13, 4장은 14.
-	public void hasAce() {
-		boolean _hasAce = false;
-		if(!_hasAce) {
-			for(Card card : this.hand) {
-				for(String ace : aces) {
-					_hasAce = (card.name == ace) ? true : false;
-				}
-			}
-		}
-		
-		sum();
-		int _howAces = howAces();
-		int _tPoint = this.point - _howAces;
-		
-		if(_hasAce && _tPoint <= 10) {
-			this.point += 10;
-		}
-	}
+	public abstract void hasAce() ;
 
 	public int howAces() {
 		int result = 0;
