@@ -18,6 +18,9 @@
 
 블랙잭은 다음과 같이 구성한다.
 
+## UML
+![blackjack](https://github.com/Gouwon/GW_Study/blob/master/BlackJack/java/blackjack.png?raw=true)
+
 ### class Card
 카드들은 이름과 점수를 가지고 있는 카드 타입의 객체로 만든다.
 카드들은 그 이후, 카드 한 벌을 만든다.
