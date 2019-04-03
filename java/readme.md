@@ -16,7 +16,7 @@
 
 ## 프로그램 개발 방향
 
-블랙잭은 다음과 같이 구성한다.
+파이썬의 경우, 슈퍼클래스인 Person을 상속받는 Player, Dealer 클래스를 만들어서 사용하고, 나머지 게임과 관련한 카드, 덱, 게임 기능 구현은 모두 다 함수를 이용하여 구현하였지만, 자바에서는 다음과 같이 Dealer, Gamer, Card 객체를 통해서 메서드를 구현하여 표현하고, 게임 진행과 관련한 기능들은 인터페이스를 통해서 선언 후 구현하도록 한다.
 
 ## UML
 ![blackjack](https://github.com/Gouwon/GW_Study/blob/master/BlackJack/java/blackjack.png?raw=true)
